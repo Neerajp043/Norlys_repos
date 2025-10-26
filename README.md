@@ -1,2 +1,2 @@
 # Norlys_repos
-i have create this repo to store the code of application
+I have created this repo to store the code of the application
