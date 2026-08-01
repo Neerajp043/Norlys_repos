@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod-emptydir
+  labels:
+    dev: insider
+spec:
+  volumes:
+  - name: neeraj
+    emptyDir: 
+      sizeLimit: 1G
+  containers:
+  - name: nginx
+    image: nginx:1.14.2
+    volumeMounts:
+      - name: neeraj
+        mountPath: /usr/share/nginx/html
+    ports:
+    - containerPort: 80
